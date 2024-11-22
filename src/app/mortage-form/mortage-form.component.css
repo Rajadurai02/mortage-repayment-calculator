@@ -1,0 +1,118 @@
+.title-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-title{
+    color: #133040;
+}
+
+.clear-all{
+    font-size: 12px;
+    text-decoration: underline;
+    color: #133040;
+    padding-bottom: 2px;
+    text-underline-offset: 3px;
+}
+
+.row{
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.col-sm-12, input[type="number"]{
+    width: 100%
+}
+
+.col-sm-6{
+    width: 50%;
+}
+
+.input-control{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #133040;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.input-control input[type="number"], .input-control input[type="number"]:focus, .input-control input[type="number"]:hover{
+    border: none;
+    outline: none;
+    color: #133040;
+}
+
+label{
+    font-size: 12px;
+    color: #7A97A9;
+    font-weight: bold;
+}
+
+ /* For Chrome, Safari, Edge, and Opera */
+ input[type="number"]::-webkit-inner-spin-button,
+ input[type="number"]::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+
+ /* For Firefox */
+ input[type="number"] {
+     -moz-appearance: textfield;
+ }
+
+ .field-icon{
+    padding: 10px;
+    background-color: #E6F7FF;
+    font-size: 12px;
+    font-weight: bold;
+    color: #7A97A9;
+ }
+
+ .field-icon.left{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+ }
+
+ .field-icon.right{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+ }
+
+ .radio-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+ }
+
+ .radio-label{
+    margin: 10px 0px;
+    width: 100%;
+    border: 1px solid #133040;
+    background-color: #FAFAE0;
+    height: 34px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #133040;
+    line-height: 12px;
+}
+
+.radio-label input[type="radio"]{
+    margin: 0px 20px 0px 10px;
+    background-color: #DBDA32;
+}
+
+.calculate-button{
+    background-color: #DBDA32;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: #133040;
+    font-size: 13px;
+    font-weight: bold;
+}

@@ -1,0 +1,49 @@
+<div class="title-section">
+    <h3 class="app-title">Mortgage Calculator</h3>
+    <span class="clear-all">Clear All</span>
+</div>
+<div class="form-container">
+    <form>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label for="mortgageNumber">Mortgage Amount</label>
+                <div class="input-control">
+                    <span class="field-icon left">$</span>
+                    <input type="number" id="mortgageNumber" class="input-field">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="mortgageTerm">Mortgage Term</label>
+                <div class="input-control">
+                    <input type="number" id="mortgageTerm" class="input-field">                    
+                    <span class="field-icon right">years</span>
+                </div>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="interestRate">Interest Rate</label>
+                <div class="input-control">
+                    <input type="number" id="interestRate" class="input-field">                    
+                    <span class="field-icon right">%</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group radio-group">
+                <label for="mortgageType">Mortgage Type</label>
+                <label class="radio-label">
+                    <input type="radio" id="typeRepayment" value="repayment"> Repayment
+                </label>
+                <label class="radio-label">
+                    <input type="radio" id="typeInterestOnly" value="interestonly"> Interest Only
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <button type="submit" class="calculate-button" id="calculateRepayBtn"><img src="/assets/images/icon-calculator.svg" alt="calculator">Calculate Replayments</button>
+            </div>
+        </div>
+    </form>
+</div>
