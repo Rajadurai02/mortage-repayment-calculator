@@ -31,19 +31,21 @@
         </div>
         <div class="row">
             <div class="form-group radio-group">
-                <label for="mortgageType">Mortgage Type</label>
-                <label class="radio-label">
-                    <input type="radio" id="typeRepayment" value="repayment"> Repayment
+                <label for="mortgageType">Mortgage Type</label>                
+                <label class="radio-label">                    
+                    <input type="radio" id="typeRepayment" name="mortageType" value="repayment">
+                    <span class="custom-radio"><span class="custom-radio-selected"></span></span> Repayment
                 </label>
-                <label class="radio-label">
-                    <input type="radio" id="typeInterestOnly" value="interestonly"> Interest Only
+                <label class="radio-label">                    
+                    <input type="radio" id="typeInterestOnly" name="mortageType" value="interestonly"> 
+                    <span class="custom-radio"><span class="custom-radio-selected"></span></span> Interest Only
                 </label>
             </div>
         </div>
         <div class="row">
             <div class="form-group">
-                <button type="submit" class="calculate-button" id="calculateRepayBtn"><img src="/assets/images/icon-calculator.svg" alt="calculator">Calculate Replayments</button>
+                <button type="submit" class="calculate-button" id="calculateRepayBtn"><img src="Images/icon-calculator.svg" alt="calculator">Calculate Replayments</button>
             </div>
-        </div>
+        </div>        
     </form>
 </div>

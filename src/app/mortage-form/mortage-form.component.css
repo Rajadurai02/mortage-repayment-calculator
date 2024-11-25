@@ -103,8 +103,35 @@ label{
 }
 
 .radio-label input[type="radio"]{
-    margin: 0px 20px 0px 10px;
+    display: none;
+}
+
+.custom-radio{
+    background-color: #fff;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #133040;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+}
+
+.custom-radio-selected{
     background-color: #DBDA32;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: none;
+}
+
+.radio-label input[type="radio"]:checked + .custom-radio {
+    border-color: #DBDA32;
+}
+
+.radio-label input[type="radio"]:checked + .custom-radio .custom-radio-selected {
+    display: block;
 }
 
 .calculate-button{
@@ -115,4 +142,7 @@ label{
     color: #133040;
     font-size: 13px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

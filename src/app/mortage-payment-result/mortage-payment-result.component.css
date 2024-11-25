@@ -1,0 +1,29 @@
+.payment-result-title{
+    color: #fff;
+}
+
+.mortgage-result-info{
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+}
+
+.payment-result-container{
+    background-color: #0E2431;
+    padding: 20px;
+    border-radius: 5px;
+    border-top: 3px solid #DBDA32;
+    margin: 20px 0px;
+}
+
+.monthly-mortgage-amount{
+    color: #DBDA32;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.term-mortgage-amount{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
