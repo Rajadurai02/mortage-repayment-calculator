@@ -7,24 +7,24 @@
         <div class="row">
             <div class="form-group col-sm-12">
                 <label for="mortgageNumber">Mortgage Amount</label>
-                <div class="input-control">
+                <div [ngClass]="{'active': formFieldStates['mortgageNumber']}" class="input-control">
                     <span class="field-icon left">$</span>
-                    <input type="number" id="mortgageNumber" class="input-field">
+                    <input type="number" id="mortgageNumber" (focus)="setFieldState('mortgageNumber', true)" (blur)="setFieldState('mortgageNumber', false)" class="input-field">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="form-group col-sm-6">
                 <label for="mortgageTerm">Mortgage Term</label>
-                <div class="input-control">
-                    <input type="number" id="mortgageTerm" class="input-field">                    
+                <div [ngClass]="{'active': formFieldStates['mortgageTerm']}" class="input-control">
+                    <input type="number" id="mortgageTerm" (focus)="setFieldState('mortgageTerm', true)" (blur)="setFieldState('mortgageTerm', false)" class="input-field">                    
                     <span class="field-icon right">years</span>
                 </div>
             </div>
             <div class="form-group col-sm-6">
                 <label for="interestRate">Interest Rate</label>
-                <div class="input-control">
-                    <input type="number" id="interestRate" class="input-field">                    
+                <div [ngClass]="{'active': formFieldStates['interestRate']}" class="input-control">
+                    <input type="number" id="interestRate" (focus)="setFieldState('interestRate', true)" (blur)="setFieldState('interestRate', false)" class="input-field">                    
                     <span class="field-icon right">%</span>
                 </div>
             </div>

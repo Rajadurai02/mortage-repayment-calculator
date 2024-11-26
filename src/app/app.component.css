@@ -1,20 +1,22 @@
 .main{
-    background-color: #E6F7FF;
-    width: 97vw;
-    height: 97vh;
+    width: 100vw;
+    height: 100vh;
     margin: 0px;     
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;  
+    background-color: var(--Slate-100); 
 }
 .content{
-    width: 70%;
-    height: 70%;
-    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    background-color: var(--White);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1000px;
+    max-height: 500px;
 }
 
 .sub-content{
@@ -26,7 +28,26 @@
 }
 
 .inverse{
-    background-color: #133040;
+    background-color: var(--Slate-900);
     border-radius: 0px 20px 20px 50px;
 }
 
+@media screen and (max-width:767px) {
+    .main {
+        background-color: unset;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sub-content {
+        padding: 0px;
+    }
+
+    .inverse {
+        border-radius: unset;
+        width: 100vw;
+        padding: 10px 20px;
+    }
+}

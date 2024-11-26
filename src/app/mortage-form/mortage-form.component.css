@@ -5,19 +5,20 @@
 }
 
 .app-title{
-    color: #133040;
+    color: var(--Slate-1100);
 }
 
 .clear-all{
-    font-size: 12px;
+    font-size: 13px;
     text-decoration: underline;
-    color: #133040;
+    color: var(--Slate-700);
     padding-bottom: 2px;
     text-underline-offset: 3px;
+    font-weight: 500;
 }
 
 .row{
-    margin: 10px 0px;
+    margin: 20px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -35,22 +36,37 @@
 .input-control{
     width: 100%;
     margin-top: 5px;
-    border: 1px solid #133040;
+    border: 1px solid var(--Slate-700);
     display: flex;
     align-items: center;
     border-radius: 5px;
 }
 
+.input-control:hover{
+    border: 1px solid var(--Slate-1100);
+    cursor: pointer;
+}
+
+.input-control.active{
+    border: 1px solid var(--Lime);
+}
+
+.input-control.active .field-icon{
+    background-color: var(--Lime);
+}
+
 .input-control input[type="number"], .input-control input[type="number"]:focus, .input-control input[type="number"]:hover{
     border: none;
     outline: none;
-    color: #133040;
+    color: var(--Slate-1100);
+    font-weight: 700;
+    margin: 0px 20px;
 }
 
 label{
-    font-size: 12px;
-    color: #7A97A9;
-    font-weight: bold;
+    font-size: 13px;
+    color: var(--Slate-700);
+    font-weight: 500;
 }
 
  /* For Chrome, Safari, Edge, and Opera */
@@ -67,10 +83,10 @@ label{
 
  .field-icon{
     padding: 10px;
-    background-color: #E6F7FF;
-    font-size: 12px;
-    font-weight: bold;
-    color: #7A97A9;
+    background-color: var(--Slate-100);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--Slate-700);
  }
 
  .field-icon.left{
@@ -92,14 +108,24 @@ label{
  .radio-label{
     margin: 10px 0px;
     width: 100%;
-    border: 1px solid #133040;
-    background-color: #FAFAE0;
+    border: 1px solid var(--Slate-700);
+    background-color: var(--White);
     height: 34px;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    color: #133040;
+    color: var(--Slate-1100);
     line-height: 12px;
+}
+
+.radio-label:hover{
+    border: 1px solid var(--Lime);
+    cursor: pointer;
+}
+
+.radio-label:has(input:checked){
+    border: 1px solid var(--Lime);
+    background-color: var(--Lime-light);
 }
 
 .radio-label input[type="radio"]{
@@ -107,10 +133,10 @@ label{
 }
 
 .custom-radio{
-    background-color: #fff;
+    background-color: var(--White);
     width: 13px;
     height: 13px;
-    border: 2px solid #133040;
+    border: 1px solid var(--Slate-700);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -119,7 +145,7 @@ label{
 }
 
 .custom-radio-selected{
-    background-color: #DBDA32;
+    background-color: var(--Lime);
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -127,7 +153,7 @@ label{
 }
 
 .radio-label input[type="radio"]:checked + .custom-radio {
-    border-color: #DBDA32;
+    border: 2px solid var(--Lime);
 }
 
 .radio-label input[type="radio"]:checked + .custom-radio .custom-radio-selected {
@@ -135,14 +161,23 @@ label{
 }
 
 .calculate-button{
-    background-color: #DBDA32;
+    background-color: var(--Lime);
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
-    color: #133040;
+    color: var(--Slate-1100);
     font-size: 13px;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.calculate-button:hover{
+    cursor: pointer;
+    background-color: var(--Lime-medium);
+}
+
+.clear-all:hover, .input-control input[type="number"]:hover{
+    cursor: pointer;
 }

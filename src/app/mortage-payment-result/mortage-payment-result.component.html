@@ -1,19 +1,29 @@
-<h3 class="payment-result-title">Your results</h3>
-<p class="mortgage-result-info">
-    Your results are shown below based on thw information you provided. To adjust the results, edit the form and click &quot;calculate repayments&quot; again.
-</p>
-<div class="payment-result-container">
+<div *ngIf="isPaymentResultCalculated; else defaultResultsDiv">
+    <h3 class="payment-result-title">Your results</h3>
     <p class="mortgage-result-info">
-        Your monthly repayments
+        Your results are shown below based on thw information you provided. To adjust the results, edit the form and
+        click &quot;calculate repayments&quot; again.
     </p>
-    <p class="monthly-mortgage-amount">
-        $1,999.50
-    </p>
-    <hr>
-    <p class="mortgage-result-info">
-        Total you'll repay over the term
-    </p>
-    <p class="term-mortgage-amount">
-        $123,498.33
-    </p>
+    <div class="payment-result-container">
+        <p class="mortgage-result-info">
+            Your monthly repayments
+        </p>
+        <p class="monthly-mortgage-amount">
+            $1,999.50
+        </p>
+        <hr>
+        <p class="mortgage-result-info">
+            Total you'll repay over the term
+        </p>
+        <p class="term-mortgage-amount">
+            $123,498.33
+        </p>
+    </div>
 </div>
+<ng-template #defaultResultsDiv>
+    <div class="default-result">
+        <img class="default-result-img" src="Images/illustration-empty.svg" alt="default-result-img">
+        <h3 class="default-result-title">Results shown here</h3>
+        <p class="default-result-info">Complete the form and click &quot;calculate repayments&quot; to see what your monthly repayments would be</p>
+    </div>
+</ng-template>
