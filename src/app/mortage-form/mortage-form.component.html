@@ -3,29 +3,38 @@
     <span class="clear-all">Clear All</span>
 </div>
 <div class="form-container">
-    <form>
+    <form [formGroup]="MortgageForm" (ngSubmit)="onMortgageFormSubmit()">
         <div class="row">
             <div class="form-group col-sm-12">
-                <label for="mortgageNumber">Mortgage Amount</label>
-                <div [ngClass]="{'active': formFieldStates['mortgageNumber']}" class="input-control">
+                <label for="mortgageAmount">Mortgage Amount</label>
+                <div [ngClass]="{'active': formFieldStates['mortgageAmount']}" class="input-control" [class.is-invalid]="MortgageAmount?.invalid && MortgageAmount?.touched">
                     <span class="field-icon left">$</span>
-                    <input type="number" id="mortgageNumber" (focus)="setFieldState('mortgageNumber', true)" (blur)="setFieldState('mortgageNumber', false)" class="input-field">
+                    <input type="number" id="mortgageAmount" (focus)="setFieldState('mortgageAmount', true)" (blur)="setFieldState('mortgageAmount', false)" class="input-field" formControlName="mortgageAmount">                    
+                </div>
+                <div *ngIf="MortgageAmount?.invalid && MortgageAmount?.touched">
+                    <span class="required">This field is required.</span>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="form-group col-sm-6">
                 <label for="mortgageTerm">Mortgage Term</label>
-                <div [ngClass]="{'active': formFieldStates['mortgageTerm']}" class="input-control">
-                    <input type="number" id="mortgageTerm" (focus)="setFieldState('mortgageTerm', true)" (blur)="setFieldState('mortgageTerm', false)" class="input-field">                    
+                <div [ngClass]="{'active': formFieldStates['mortgageTerm']}" class="input-control" [class.is-invalid]="MortgageTerm?.invalid && MortgageTerm?.touched">
+                    <input type="number" id="mortgageTerm" (focus)="setFieldState('mortgageTerm', true)" (blur)="setFieldState('mortgageTerm', false)" class="input-field" formControlName="mortgageTerm">                    
                     <span class="field-icon right">years</span>
+                </div>
+                <div *ngIf="MortgageTerm?.invalid && MortgageTerm?.touched">
+                    <span class="required">This field is required.</span>
                 </div>
             </div>
             <div class="form-group col-sm-6">
                 <label for="interestRate">Interest Rate</label>
-                <div [ngClass]="{'active': formFieldStates['interestRate']}" class="input-control">
-                    <input type="number" id="interestRate" (focus)="setFieldState('interestRate', true)" (blur)="setFieldState('interestRate', false)" class="input-field">                    
+                <div [ngClass]="{'active': formFieldStates['interestRate']}" class="input-control" [class.is-invalid]="InterestRate?.invalid && InterestRate?.touched">
+                    <input type="number" id="interestRate" (focus)="setFieldState('interestRate', true)" (blur)="setFieldState('interestRate', false)" class="input-field" formControlName="interestRate">                    
                     <span class="field-icon right">%</span>
+                </div>
+                <div *ngIf="InterestRate?.invalid && InterestRate?.touched">
+                    <span class="required">This field is required.</span>
                 </div>
             </div>
         </div>
@@ -33,14 +42,17 @@
             <div class="form-group radio-group">
                 <label for="mortgageType">Mortgage Type</label>                
                 <label class="radio-label">                    
-                    <input type="radio" id="typeRepayment" name="mortageType" value="repayment">
+                    <input type="radio" id="typeRepayment" name="mortgageType" value="repayment" formControlName="mortgageType">
                     <span class="custom-radio"><span class="custom-radio-selected"></span></span> Repayment
                 </label>
                 <label class="radio-label">                    
-                    <input type="radio" id="typeInterestOnly" name="mortageType" value="interestonly"> 
+                    <input type="radio" id="typeInterestOnly" name="mortgageType" value="interestonly" formControlName="mortgageType"> 
                     <span class="custom-radio"><span class="custom-radio-selected"></span></span> Interest Only
                 </label>
-            </div>
+                <div *ngIf="!MortgageType?.invalid">
+                    <span class="required">This field is required.</span>
+                </div>
+            </div>            
         </div>
         <div class="row">
             <div class="form-group">
