@@ -1,6 +1,6 @@
 <div class="title-section">
     <h3 class="app-title">Mortgage Calculator</h3>
-    <span class="clear-all">Clear All</span>
+    <span class="clear-all" (click)="clearFormFieldValue()" (keyup)="clearFormFieldValue()">Clear All</span>
 </div>
 <div class="form-container">
     <form [formGroup]="MortgageForm" (ngSubmit)="onMortgageFormSubmit()">
@@ -49,7 +49,7 @@
                     <input type="radio" id="typeInterestOnly" name="mortgageType" value="interestonly" formControlName="mortgageType"> 
                     <span class="custom-radio"><span class="custom-radio-selected"></span></span> Interest Only
                 </label>
-                <div *ngIf="!MortgageType?.invalid">
+                <div *ngIf="MortgageType?.invalid && formSubmitted">
                     <span class="required">This field is required.</span>
                 </div>
             </div>            

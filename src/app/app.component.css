@@ -6,17 +6,18 @@
     align-items: center;
     justify-content: center;  
     background-color: var(--Slate-100); 
+    min-height: 600px;
 }
 .content{
     width: 90%;
-    height: 90%;
+    height: 100%;
     background-color: var(--White);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1000px;
-    max-height: 500px;
+    max-height: 530px;
 }
 
 .sub-content{
